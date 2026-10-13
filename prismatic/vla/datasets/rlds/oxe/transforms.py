@@ -841,6 +841,12 @@ def libero_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
     return trajectory
 
 
+
+def shinstarr_rb5_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
+    """Shin Starr RB5: 빌더가 EEF_POS 7D action(grip 1=open) · POS_EULER 8D state를 규격대로 저장 → 항등."""
+    return trajectory
+
+
 # === Registry ===
 OXE_STANDARDIZATION_TRANSFORMS = {
     "bridge_oxe": bridge_oxe_dataset_transform,
@@ -919,4 +925,6 @@ OXE_STANDARDIZATION_TRANSFORMS = {
     "libero_object_no_noops": libero_dataset_transform,
     "libero_goal_no_noops": libero_dataset_transform,
     "libero_10_no_noops": libero_dataset_transform,
+    ### Shin Starr
+    "shinstarr_rb5_sauce": shinstarr_rb5_transform,
 }

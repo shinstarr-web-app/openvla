@@ -670,4 +670,12 @@ OXE_DATASET_CONFIGS = {
         "state_encoding": StateEncoding.POS_EULER,
         "action_encoding": ActionEncoding.EEF_POS,
     },
+    ### Shin Starr RB5-850E (2026-10-02) — 03_dataset/shinstarr_rb5_sauce 빌더 규격
+    "shinstarr_rb5_sauce": {
+        "image_obs_keys": {"primary": "image", "secondary": None, "wrist": None},
+        "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
+        "state_obs_keys": ["state"],          # 빌더가 이미 POS_EULER 8D로 저장
+        "state_encoding": StateEncoding.POS_EULER,
+        "action_encoding": ActionEncoding.EEF_POS,
+    },
 }
